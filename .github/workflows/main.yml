@@ -40,9 +40,10 @@ jobs:
           python -m flake8 backend/
           cd backend/
           python manage.py test/
- build_and_push_to_docker_hub:
+build_and_push_to_docker_hub:
   name: Push Docker image to Dockerhub
-  needs: [test_backend]
+  needs:
+    - test_backend
   runs-on: ubuntu-latest
   steps:
     - name: Checkout repo
