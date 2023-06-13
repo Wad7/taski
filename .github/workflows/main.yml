@@ -43,7 +43,7 @@ jobs:
   build_and_push_to_docker_hub:
     name: Push Docker image to Dockerhub
     needs:
-      - test_backend
+      - tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
