@@ -61,6 +61,7 @@ on:
           tags: vady8/taski_backend:latest
 
   frontend_tests:
+    jobs:
     runs-on: ubuntu-latest
   steps:
        uses: actions/checkout@v3
@@ -95,7 +96,7 @@ on:
         with:
           context: ./frontend/
           push: true
-          tags: vady8/taski_frontend:latest
+          tags: vady8/taski-frontend:latest
   build_gateway_and_push_to_docker_hub:
     name: Push gateway Docker image to DockerHub
     runs-on: ubuntu-latest
