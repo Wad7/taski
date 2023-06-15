@@ -60,7 +60,7 @@ jobs:
           push: true
           tags: vady8/taski_backend:latest
   frontend_tests: null
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
     steps:
        - uses: actions/checkout@v3
        - name: Set up nodeJS
