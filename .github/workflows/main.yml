@@ -92,7 +92,7 @@ jobs:
       - name: Push to DockerHub
         uses: docker/build-push-action@v4
         with:
-          context: .frontend/
+          context: ./frontend/
           push: true
           tags: vady8/taski_frontend:latest
   build_gateway_and_push_to_docker_hub:
