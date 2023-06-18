@@ -25,9 +25,9 @@ jobs:
           python-version: 3.9
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip 
+          python -m pip install --upgrade pip
           pip install flake8==6.0.0 flake8-isort==6.0.0
-          pip install -r ./backend/requirements.txt 
+          pip install -r ./backend/requirements.txt
       - name: Test with flake8 and django tests
         env:
           POSTGRES_USER: django_user
@@ -39,6 +39,7 @@ jobs:
           python -m flake8 backend/
           cd backend/
           python manage.py test
+jobs:
 build_and_push_to_docker_hub:
   name: Push Docker image to DockerHub
   runs-on: ubuntu-latest
@@ -75,6 +76,7 @@ frontend_tests:
       run: |
         cd frontend/
         npm run test
+jobs:
 build_frontend_and_push_to_docker_hub:
   name: Push frontend Docker image to DockerHub
   runs-on: ubuntu-latest
@@ -95,6 +97,7 @@ build_frontend_and_push_to_docker_hub:
         context: ./frontend/
         push: true
         tags: vady8/taski_frontend:latest
+jobs:
 build_gateway_and_push_to_docker_hub:
   name: Push gateway Docker image to DockerHub
   runs-on: ubuntu-latest
