@@ -5,7 +5,7 @@ WORKDIR /app
 COPY requirements.txt ./
 RUN pip install -r requirements.txt --no-cache-dir
 
-COPY frontend/ /app/frontend/
+COPY ./frontend/ /app/frontend/
 
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend.wsgi"]
 
