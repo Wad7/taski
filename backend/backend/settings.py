@@ -103,8 +103,17 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
+
+# Путь для статических файлов внутри контейнера backend
+STATIC_ROOT = '/backend_static/'
+
+# Путь для статических файлов внутри контейнера frontend
+#STATIC_ROOT = '/frontend_static/'
+
+# Путь для статических файлов внутри контейнера gateway
+#STATIC_ROOT = '/staticfiles/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
