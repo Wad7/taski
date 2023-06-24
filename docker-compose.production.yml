@@ -30,7 +30,7 @@ services:
     image: vady8/taski_gateway
     env_file: .env
     volumes:
-      - gateway_static_volume:/staticfiles/
+      - gateway_static_volume:/staticfiles
     ports:
       - 8000:80
 
