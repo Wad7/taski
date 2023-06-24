@@ -15,7 +15,7 @@ jobs:
           POSTGRES_DB: django_db
         ports:
           - 5432:5432
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 30s
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
