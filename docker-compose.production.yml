@@ -2,6 +2,9 @@ version: '3'
 
 volumes:
   pg_data_production:
+  frontend_static_volume:
+  backend_static_volume:
+  gateway_static_volume:
 
 services:
   db:
