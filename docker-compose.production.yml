@@ -18,6 +18,8 @@ services:
     env_file: .env
     volumes:
       - backend_static_volume:/backend_static/static/
+    depends_on:
+      - db
 
   frontend:
     image: vady8/taski_frontend
